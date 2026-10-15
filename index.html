@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interpretazione delle Norme Giuridiche - Tool 1ª AFM</title>
+<style>
+:root{--blu:#1a3a5f;--azz:#e8f1fa;--acc:#e9a426;--ok:#1e8e3e;--ko:#c5221f;--gr:#f6f7f9}
+*{box-sizing:border-box}body{font-family:system-ui,Arial,sans-serif;margin:0;background:var(--gr);color:#222;line-height:1.6;font-size:18px}
+header{background:var(--blu);color:#fff;padding:1.2rem 1rem;text-align:center}
+header h1{margin:.2rem 0;font-size:1.5rem}header p{margin:.2rem 0;opacity:.9}
+nav{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;background:#fff;padding:.6rem;position:sticky;top:0;z-index:10;border-bottom:2px solid var(--blu)}
+nav button{border:2px solid var(--blu);background:#fff;color:var(--blu);border-radius:20px;padding:.45rem .9rem;font-size:1rem;cursor:pointer;font-weight:600}
+nav button.attivo,nav button:hover{background:var(--blu);color:#fff}
+main{max-width:900px;margin:auto;padding:1rem}
+section.card{background:#fff;border-radius:12px;padding:1.2rem 1.3rem;margin:1rem 0;box-shadow:0 2px 8px rgba(0,0,0,.08);display:none}
+section.card.visibile{display:block}
+h2{color:var(--blu);margin-top:0}h3{color:var(--blu)}
+.box{background:var(--azz);border-left:6px solid var(--blu);padding:.8rem 1rem;border-radius:0 8px 8px 0;margin:.8rem 0}
+.box.acc{border-color:var(--acc);background:#fef6e3}
+.esempio{background:#fff;border:2px dashed var(--blu);border-radius:8px;padding:.8rem;margin:.6rem 0}
+button.btn{background:var(--blu);color:#fff;border:none;border-radius:8px;padding:.6rem 1.1rem;font-size:1rem;cursor:pointer;margin:.3rem .2rem}
+button.btn2{background:var(--acc);color:#222;font-weight:700}
+button.btn:hover{opacity:.9}
+.gloss{border-bottom:2px dotted var(--acc);cursor:help;font-weight:600}
+.grid{display:grid;gap:.7rem}
+@media(min-width:700px){.grid3{grid-template-columns:1fr 1fr 1fr}.grid2{grid-template-columns:1fr 1fr}}
+.scheda{border:2px solid var(--blu);border-radius:10px;padding:.8rem;text-align:center;background:var(--azz)}
+.scheda b{color:var(--blu)}
+.sim{display:flex;gap:.5rem;flex-wrap:wrap;margin:.6rem 0}
+.sim button{flex:1;min-width:140px}
+.ris{border-radius:8px;padding:.8rem;margin-top:.6rem;display:none}
+.ris.show{display:block}
+.quiz-dom{border:1px solid #ddd;border-radius:8px;padding:.7rem;margin:.6rem 0}
+.quiz-dom label{display:block;background:#f1f4f8;border-radius:6px;padding:.4rem .6rem;margin:.3rem 0;cursor:pointer}
+.quiz-dom label:hover{background:var(--azz)}
+.barra{height:12px;background:#ddd;border-radius:6px;overflow:hidden;margin:.5rem 0}
+.barra div{height:100%;background:var(--ok);width:0%}
+#punteggio{font-weight:800;color:var(--blu)}
+footer{text-align:center;padding:1rem;color:#555}
+.flow button{display:block;width:100%;text-align:left;margin:.3rem 0;background:#fff;border:2px solid var(--blu);border-radius:8px;padding:.6rem;cursor:pointer;font-size:1rem}
+#stampa-scheda{display:none}
+@media print{nav,footer,.no-print{display:none!important}#stampa-scheda{display:block!important}section.card{display:block!important;box-shadow:none;border:1px solid #000}}
+dialog{border-radius:10px;max-width:500px}
+</style>
+</head>
+<body>
+<header>
+<h1>⚖️ Interpretare le Norme Giuridiche</h1>
+<p>Tool interattivo per classe 1ª AFM – Diritto ed Economia</p>
+</header>
+<nav class="no-print" id="menu">
+<button data-t="s1" class="attivo">1. Perché?</button>
+<button data-t="s2">2. Art.12</button>
+<button data-t="s3">3. Letterale vs Logica</button>
+<button data-t="s4">4. Chi interpreta?</button>
+<button data-t="s5">5. Analogia</button>
+<button data-t="s6">6. Verifica</button>
+<button data-t="s7">📄 Ripasso</button>
+</nav>
+<main>
+<!-- 1 -->
+<section id="s1" class="card visibile">
+<h2>1. Perché le norme vanno interpretate?</h2>
+<p>Le norme sono <span class="gloss" data-g="generali">generali</span> e <span class="gloss" data-g="astratte">astratte</span>: non descrivono un singolo caso, ma tutti i casi possibili. Il giudice, il cittadino, l'impresa devono <b>capire il significato</b> prima di applicarle. Questo è <b>interpretare</b>.</p>
+<div class="esempio">
+<b>🚫 Caso del parco:</b> un cartello dice <i>"Vietato l'ingresso ai veicoli nel parco"</i>.<br>
+Un'auto? di sicuro è vietata. E un <b>monopattino elettrico</b>? E un <b>passeggino</b>? E un'<b>ambulanza</b> in emergenza?<br>
+La sola frase non basta: serve interpretazione.
+</div>
+<div class="box">Regola chiave: <b>norma = descrizione astratta (fattispecie) + conseguenza</b>. Interpretare = collegare la norma al caso concreto.</div>
+<button class="btn" onclick="vai('s2')">Avanti: Art.12 →</button>
+</section>
+<!-- 2 -->
+<section id="s2" class="card">
+<h2>2. La bussola: Art.12 Preleggi</h2>
+<p>Le <span class="gloss" data-g="preleggi">Disposizioni sulla legge in generale (Preleggi)</span>, art.12, dicono come si interpreta:</p>
+<div class="box"><b>1° passo – Interpretazione letterale:</b> si dà alla legge il senso fatto palese dal <b>significato proprio delle parole</b> secondo la connessione di esse.</div>
+<div class="box acc"><b>2° passo – Interpretazione logica:</b> se resta dubbio, si cerca l'<b>intenzione del legislatore</b> (la <span class="gloss" data-g="ratio">ratio legis</span>, lo scopo della norma).</div>
+<div class="esempio"><b>Esempio:</b> Art.2 c.c. "La maggiore età è fissata a 18 anni".<br>Letterale: chiaro, 18 anni.<br><br><b>Esempio con dubbio:</b> Art.2043 c.c. "qualunque fatto doloso o colposo che cagiona ad altri un danno <i>ingiusto</i>, obbliga al risarcimento". Cosa è <i>ingiusto</i>? Serve interpretazione logica: danno contro il diritto (es. rompere il telefono di un compagno per dispetto).</div>
+<button class="btn" onclick="vai('s3')">Prova il simulatore →</button>
+</section>
+<!-- 3 -->
+<section id="s3" class="card">
+<h2>3. Simulatore: Letterale vs Logica</h2>
+<p>Scegli un caso e confronta le due letture. Poi clicca "Soluzione".</p>
+<div class="sim no-print">
+<button class="btn" onclick="caso(0)">Caso A: Monopattino</button>
+<button class="btn" onclick="caso(1)">Caso B: Ambulanza</button>
+<button class="btn" onclick="caso(2)">Caso C: Danno ingiusto</button>
+</div>
+<div id="caso-testo" class="esempio">Seleziona un caso sopra.</div>
+<div class="sim no-print"><button class="btn btn2" onclick="mostraSol()">Mostra soluzione guidata</button></div>
+<div id="caso-sol" class="ris box"></div>
+<button class="btn" onclick="vai('s4')">Avanti: Chi interpreta? →</button>
+</section>
+<!-- 4 -->
+<section id="s4" class="card">
+<h2>4. Chi interpreta? I 3 soggetti</h2>
+<div class="grid grid3">
+<div class="scheda"><b>AUTENTICA</b><br>👑 Stesso legislatore<br><small>Fa una nuova legge per spiegare la precedente. Obbligatoria per tutti.</small><br><i>Es: legge che precisa cosa è "veicolo".</i></div>
+<div class="scheda"><b>GIUDIZIALE</b><br>⚖️ I giudici<br><small>Il giudice interpreta per decidere il caso. Vale per quel processo (ma la Cassazione orienta tutti).</small><br><i>Es: sentenza che dice se il monopattino è veicolo.</i></div>
+<div class="scheda"><b>DOTTRINALE</b><br>📚 Studiosi / professori<br><small>Spiega nei manuali. Non obbligatoria, ma convince.</small><br><i>Es: commento nel libro di diritto.</i></div>
+</div>
+<div class="box acc">Domanda tipica verifica: <b>quale interpretazione è obbligatoria per tutti?</b> → Quella <b>autentica</b> (ha forza di legge).</div>
+<button class="btn" onclick="vai('s5')">Avanti: Analogia →</button>
+</section>
+<!-- 5 -->
+<section id="s5" class="card">
+<h2>5. Se la legge manca: l'analogia</h2>
+<p>Se non c'è una norma per il caso (vuoto normativo), art.12 comma 2 prevede:</p>
+<div class="grid grid2">
+<div class="box"><b>Analogia legis:</b> uso la norma prevista per un caso <b>simile</b>.<br><i>Es: danno da drone → applico le regole del danno da oggetti in custodia.</i></div>
+<div class="box"><b>Analogia iuris:</b> se non c'è nemmeno un caso simile, uso i <b>principi generali</b> dell'ordinamento.<br><i>Es: principio "nessuno deve arricchirsi a danno altrui".</i></div>
+</div>
+<h3>🚨 Limite: diritto penale</h3>
+<div class="box acc"><b>Vietata l'analogia in penale</b> (art.25 Cost. – principio di legalità: <i>nullum crimen sine lege</i>). Nessuno può essere punito senza una legge che già prevedeva quel reato. Es: se una nuova truffa online non è prevista come reato, non si può punire "per somiglianza".</div>
+<div class="flow no-print">
+<h3>Mini-flowchart: cosa fa il giudice?</h3>
+<button onclick="alert('1. Cerca la norma scritta e interpretala (letterale + logica).')">1️⃣ C'è una norma per il caso? → interpretala</button>
+<button onclick="alert('2. Cerca una norma simile (analogia legis).')">2️⃣ Se manca → cerca caso SIMILE</button>
+<button onclick="alert('3. Usa i principi generali (analogia iuris). In penale: STOP, non si punisce.')">3️⃣ Se manca ancora → principi generali (mai in penale)</button>
+</div>
+<button class="btn" onclick="vai('s6')">Vai alla verifica →</button>
+</section>
+<!-- 6 -->
+<section id="s6" class="card">
+<h2>6. Verifica: 8 quiz + 2 casi</h2>
+<div class="barra no-print"><div id="bar"></div></div>
+<p>Punteggio: <span id="punteggio">0</span> / 10 – Migliore salvato: <span id="best">0</span></p>
+<div id="quiz"></div>
+<h3>Casi pratici (2 punti)</h3>
+<div class="quiz-dom"><b>Caso 1:</b> Nel parco entra un'ambulanza per soccorrere un bambino. È sanzionabile? Perché?<br>
+<label><input type="radio" name="c1" value="0"> Sì, perché veicolo = sempre vietato (solo letterale)</label>
+<label><input type="radio" name="c1" value="1"> No, per interpretazione logica: lo scopo è sicurezza/riposo, il soccorso è coerente con la ratio</label></div>
+<div class="quiz-dom"><b>Caso 2:</b> Un nuovo danno da intelligenza artificiale non è previsto da nessuna norma civile. Cosa può fare il giudice civile?<br>
+<label><input type="radio" name="c2" value="0"> Non può decidere, aspetta una nuova legge</label>
+<label><input type="radio" name="c2" value="1"> Può usare analogia legis o iuris, motivando la somiglianza</label></div>
+<div class="no-print"><button class="btn btn2" onclick="correggi()">Correggi tutto</button> <button class="btn" onclick="resetQ()">Ricomincia</button></div>
+<div id="feed" class="ris box"></div>
+<button class="btn" onclick="vai('s7')">Scheda ripasso →</button>
+</section>
+<!-- 7 -->
+<section id="s7" class="card">
+<h2>📄 Scheda ripasso (stampabile)</h2>
+<div id="stampa-scheda"></div>
+<div class="box">• <b>Interpretare =</b> chiarire la norma astratta per il caso concreto.<br>• <b>Art.12:</b> 1) parole (letterale) 2) intenzione legislatore (logica).<br>• <b>Soggetti:</b> autentica (legislatore, obbligatoria) – giudiziale (giudici) – dottrinale (studiosi).<br>• <b>Analogia:</b> legis (caso simile) / iuris (principi). Vietata in penale.</div>
+<button class="btn no-print" onclick="window.print()">🖨️ Stampa / Salva PDF</button>
+</section>
+</main>
+<footer>1ª AFM – Diritto • File unico offline • Glossario: clicca le parole sottolineate</footer>
+<dialog id="dlg"><h3 id="dlg-t"></h3><p id="dlg-p"></p><button class="btn" onclick="document.getElementById('dlg').close()">Chiudi</button></dialog>
+<script>
+const G={generali:"Riguarda tutti, non una singola persona.",astratte:"Descrive una situazione tipo, non un fatto già accaduto.",preleggi:"16 articoli prima del Codice Civile, valgono per tutto l'ordinamento.",ratio:"Lo scopo pratico della legge: cosa voleva proteggere il legislatore?",fattispecie:"Il fatto-tipo descritto dalla norma."};
+document.querySelectorAll('.gloss').forEach(e=>e.onclick=()=>{document.getElementById('dlg-t').textContent=e.textContent;document.getElementById('dlg-p').textContent=G[e.dataset.g]||G.fattispecie;document.getElementById('dlg').showModal();});
+function vai(id){document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('attivo',b.dataset.t===id));document.querySelectorAll('section.card').forEach(s=>s.classList.toggle('visibile',s.id===id));window.scrollTo(0,0);}
+document.querySelectorAll('#menu button').forEach(b=>b.onclick=()=>vai(b.dataset.t));
+const CASI=[
+{t:"Caso A: divieto veicoli – passa un monopattino elettrico.",s:"<b>Letterale:</b> 'veicolo' nel vocabolario include monopattino a motore → vietato.<br><b>Logica (ratio = silenzio/sicurezza pedoni):</b> il monopattino veloce e rumoroso disturba → resta vietato. Le due letture convergono."},
+{t:"Caso B: divieto veicoli – entra ambulanza in emergenza.",s:"<b>Letterale:</b> ambulanza è veicolo → vietato.<br><b>Logica:</b> ratio è proteggere salute/riposo; vietare i soccorsi contraddice lo scopo → permesso. Vince la logica."},
+{t:"Caso C: art.2043 – compagno rompe per dispetto il tuo tablet.",s:"<b>Letterale:</b> 'danno ingiusto' è vago.<br><b>Logica:</b> intenzione = tutelare il patrimonio contro atti illeciti → danno ingiusto = lesione di un diritto. Quindi risarcimento dovuto."}];
+let cur=-1;
+function caso(i){cur=i;document.getElementById('caso-testo').innerHTML=CASI[i].t;const s=document.getElementById('caso-sol');s.classList.remove('show');s.innerHTML="";}
+function mostraSol(){if(cur<0){alert('Scegli prima un caso');return;}const s=document.getElementById('caso-sol');s.innerHTML=CASI[cur].s;s.classList.add('show');}
+const Q=[
+{q:"Perché le norme vanno interpretate?",o:["Perché sono scritte male","Perché sono generali e astratte e vanno applicate a casi concreti","Solo per gli avvocati"],v:1},
+{q:"Art.12: cosa si guarda prima?",o:["L'intenzione del giudice","Il significato proprio delle parole e la loro connessione","I principi generali"],v:1},
+{q:"L'interpretazione logica cerca…",o:["Il dizionario","L'intenzione / scopo del legislatore (ratio)","Una norma simile"],v:1},
+{q:"Chi fa l'interpretazione autentica?",o:["Il giudice","Il professore","Lo stesso legislatore con una nuova legge"],v:2},
+{q:"L'interpretazione giudiziale è fatta da…",o:["Giudici nelle sentenze","Parlamento","Cittadini"],v:0},
+{q:"L'interpretazione dottrinale…",o:["È obbligatoria come la legge","È lo studio degli studiosi, non obbligatoria ma autorevole","Non esiste"],v:1},
+{q:"Analogia legis significa…",o:["Applicare la norma di un caso simile","Usare i principi generali","Inventare una pena"],v:0},
+{q:"Perché l'analogia è vietata in penale?",o:["Per pigrizia","Principio di legalità: si punisce solo ciò che la legge già prevede come reato","Perché costa troppo"],v:1}];
+const qdiv=document.getElementById('quiz');
+Q.forEach((e,i)=>{let h=`<div class="quiz-dom"><b>${i+1}. ${e.q}</b>`;e.o.forEach((o,j)=>{h+=`<label><input type="radio" name="q${i}" value="${j}"> ${o}</label>`});h+=`</div>`;qdiv.innerHTML+=h;});
+document.getElementById('best').textContent=localStorage.getItem('afm_best')||0;
+function correggi(){let p=0;Q.forEach((e,i)=>{const s=document.querySelector(`input[name=q${i}]:checked`);if(s&&+s.value===e.v)p++;});['c1','c2'].forEach(n=>{const s=document.querySelector(`input[name=${n}]:checked`);if(s&&s.value==="1")p++;});
+document.getElementById('punteggio').textContent=p;document.getElementById('bar').firstElementChild||0;document.getElementById('bar').innerHTML=`<div style="width:${p*10}%"></div>`;
+const f=document.getElementById('feed');f.classList.add('show');
+f.innerHTML=p>=6?`✅ <b>Promosso (${p}/10).</b> Hai capito letterale/logica e analogia. Ripassa i soggetti.`:`❌ <b>${p}/10, da ripassare.</b> Rileggi Art.12 e rifai il simulatore.`;
+const b=+localStorage.getItem('afm_best')||0;if(p>b){localStorage.setItem('afm_best',p);document.getElementById('best').textContent=p;}}
+function resetQ(){document.querySelectorAll('input[type=radio]').forEach(r=>r.checked=false);document.getElementById('punteggio').textContent=0;document.getElementById('feed').classList.remove('show');}
+</script>
+</body>
+</html>
